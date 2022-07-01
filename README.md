@@ -32,18 +32,13 @@ The Poisson process is one of the most widely-used counting processes. It is usu
 ```
 import numpy as np
 import math
-
 l=3
 t=2
-
 def p(x):
     return round(math.exp(-l*t)*((l*t)*x)/math.factorial(x),2)
-
 print("probability that exactly 4 customers arrive",p(4))
-
 n=1-(p(0)+p(1)+p(2)+p(3)+p(4))
 print("probability that more than 4 customers arrive",n)
-
 m=p(0)+p(1)+p(2)+p(3)
 print(" rate of 3 per minute during a time interval of 2 min.",m)
  ```
